@@ -1,0 +1,44 @@
+{
+  "name": "attendance-system",
+  "version": "1.0.0",
+  "description": "Cloud-Based Face Recognition Attendance System",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run backend:dev\" \"npm run admin:dev\"",
+    "backend:dev": "cd backend && npm run dev",
+    "admin:dev": "cd admin-dashboard && npm start",
+    "mobile:android": "cd mobile && npm run android",
+    "mobile:ios": "cd mobile && npm run ios",
+    "build": "npm run backend:build && npm run admin:build && npm run mobile:build",
+    "backend:build": "cd backend && npm run build",
+    "admin:build": "cd admin-dashboard && npm run build",
+    "mobile:build": "cd mobile && npm run build",
+    "test": "npm run backend:test && npm run admin:test && npm run mobile:test",
+    "backend:test": "cd backend && npm test",
+    "admin:test": "cd admin-dashboard && npm test",
+    "mobile:test": "cd mobile && npm test",
+    "lint": "npm run backend:lint && npm run admin:lint && npm run mobile:lint",
+    "backend:lint": "cd backend && npm run lint",
+    "admin:lint": "cd admin-dashboard && npm run lint",
+    "mobile:lint": "cd mobile && npm run lint"
+  },
+  "keywords": [
+    "face-recognition",
+    "attendance",
+    "biometric",
+    "mobile",
+    "cloud",
+    "security",
+    "anti-spoofing"
+  ],
+  "author": "Attendance System Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "backend",
+    "mobile",
+    "admin-dashboard"
+  ]
+}
